@@ -976,7 +976,7 @@ function renderizarBotonSoporteNativo() {
         const CALC_TRIGGER = "Cargo por mora";
         const CALC_TARGETS = ["Pago completo de la factura", "Importe de la factura de reinversión"];
 
-        const BUTTON_TOP_POS = '330px'; 
+        const BUTTON_TOP_POS = '275px'; 
         const SYNC_KEY = 'crm_dom_editor_cmd'; 
         const MEMORY_KEY = 'crm_editor_memory_values'; 
         
