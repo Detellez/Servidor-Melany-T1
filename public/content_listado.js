@@ -99,7 +99,7 @@
             if (buttons.length === 0) return alert('No se encontraron botones.');
             if (reverseOrder) buttons.reverse();
 
-            const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+            const isMac = navigator.userAgent.toUpperCase().indexOf('MAC OS') >= 0 || (navigator.userAgentData && navigator.userAgentData.platform === 'macOS');
 
             if (isMac) {
                 const abrirSeguro = async () => {
@@ -205,7 +205,7 @@
             let duplicates = duplicateGroups.flat();
             const finalOrder = [...duplicates, ...uniques];
             const selectorAction = getSelectorAction();
-            const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+            const isMac = navigator.userAgent.toUpperCase().indexOf('MAC OS') >= 0 || (navigator.userAgentData && navigator.userAgentData.platform === 'macOS');
 
             if (isMac) {
                 const abrirPestañasSeguro = async () => {
