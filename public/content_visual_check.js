@@ -407,7 +407,7 @@ function scanIframe(searchId, page) {
 
     window.addEventListener('keydown', (e) => {
         // Detectar si es Mac (Apple) o Windows/Linux
-        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+        const isMac = navigator.userAgent.toUpperCase().indexOf('MAC OS') >= 0 || (navigator.userAgentData && navigator.userAgentData.platform === 'macOS');
         // Asignar el modificador correcto: Command en Mac (metaKey), Control en PC (ctrlKey)
         const modifierKey = isMac ? e.metaKey : e.ctrlKey;
 
